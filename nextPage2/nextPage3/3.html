@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNKNOWN WEBSITE</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .cat {
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 110px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: rgb(248, 118, 242);
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 20px 30px;
+            font-size: large;
+            color: white;  
+        }
+
+        button:hover {
+            background-color: rgb(192, 60, 185);
+            color: rgb(182, 179, 179);
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        .silentSound {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .popup {
+            width: 400px;
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+        }
+        
+        .open-popup {
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            text-align: center;
+        }
+
+        .popup h2 {
+            font-size: 38px;
+            font-family: Tahoma, sans-serif;
+            margin-top: 30px;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+        }
+
+        .popup button {
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background:  rgb(248, 118, 242);
+            color: #fff;
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            padding: 10px 60px;
+            background: #fff;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="cat" src="assets/cat w loveee.jpg" alt="image">
+        <div class="containerP">
+            <button type="submit" onclick="openPopup()">here is ur button love</button>
+        <p class="silentSound">*hehe click this and u will get the notification</p>
+        <div class="popup" id="popup">
+            <h2 style="color: palevioletred;">gewd mowningg</h2>
+            <p style="font-family: fantasy; letter-spacing: 1px;">when i saw ur smilee i see something more BEAUTIFUL than the stars. Have A Great Day Todayy!! </p>
+            <button class="btn" type="submit" onclick="closePopup()">close</button>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup")
+        }
+    </script>
+</body>
+</html>
